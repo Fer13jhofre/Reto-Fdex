@@ -1,0 +1,196 @@
+*{
+	padding: 0;
+	margin: 0; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	list-style: none;
+}
+body{
+	background-color: #F2F2F2;
+	font-family: 'Montserrat', sans-serif;
+}
+main {
+	max-width: 610px;
+	margin: 50px auto;
+}
+.clear{clear: both;}
+a{text-decoration: none; transition: .3s ease all;}
+h1,h2 {font-family: Lilita One; font-weight: lighter;}
+h1{
+	background: linear-gradient(#F0C12A,#FA210D);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	color: transparent;
+  	text-align: center;
+  	margin: 40px 0 35px;
+}
+h2{font-size: 32px; margin: 20px 0;}
+img {max-width: 100%; height: auto;}
+#carousel{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 32px;
+}
+#carousel .carousel-box{
+	max-width: 500px;
+	margin: 0 5px;
+	overflow: hidden;
+}
+#carousel .item-box{
+	max-width: 100%;
+	white-space: nowrap;
+}
+#carousel .item-box .item{
+	display: inline-block;
+	width: calc(98% / 3);
+	padding: 7px;
+}
+.item > a {
+	display: block; 
+	background-repeat: no-repeat;  
+	background-position: center; 
+	background-size: cover;
+	box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+.item > a:hover{transform: scale(1.06);}
+.item > a:hover img, .item > a.active img {opacity: 0;}
+.undersun > a {background-image: url(../images/btn_sol_1.png);}
+.underrain > a {background-image: url(../images/btn_lluvia_1.png);}
+.underground > a {background-image: url(../images/btn_tierra_1.png);}
+.item img {display: block; transition: .2s all;}
+.handler {
+    background-color: rgba(0,0,0,.3);
+    padding: 28px 10px 30px;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.handler:hover{background-color: rgba(0,0,0,.7);}
+.photos{display: none;}
+.photos figure{
+	padding: 6px;
+    width: 50%;
+    float: left;
+}
+.photos figure img {box-shadow: 0 0 25px rgba(0,0,0,0.2); cursor: pointer;}
+.overlay{
+	background: linear-gradient(150deg, rgba(39,55,239,.9), rgba(38,179,120, 0.9)); 
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 20px 0;
+	overflow-y: auto;
+	visibility: hidden;
+	transition: .3s ease all;
+	opacity: 0;
+}
+.overlay.visible{
+	visibility: visible;
+	opacity: 1;
+}
+.popup{
+	height: 100%;
+	max-width: 410px;
+	color: #FFFFFF;
+	transition: .3s ease all;
+	opacity: 0;
+	transform: scale(0.7);
+}
+.popup.visible{
+	opacity: 1;
+	transform: scale(1);
+}
+.slider{position: relative;}
+.slider ul .slide{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+.slider .dot-box{
+	text-align: center;
+    margin-top: 15px;
+}
+.slider .dot-box .dot {
+    border: 1px solid #FFFFFF;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.slider .dot-box .dot:hover,.slider .dot-box .dot.active {
+    background: #FFFFFF;
+    border:0;
+}
+.slider ul .slide.current{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 1s, opacity 1s;
+}
+.btns-popup{
+	text-align: center;
+    font-size: 24px;
+    padding-top: 18px;
+}
+.btns-popup a{font-weight: 800; color: inherit; transition: .3s ease all;}
+.btns-popup a.btn-continue{
+	display: block;
+	background-color: #FFFFFF;
+	border-radius: 50px;
+	padding: 18px 10px;
+	box-shadow: 0 0 15px rgba(0,0,0,.35);
+	
+}
+.btns-popup a.btn-continue span{
+	display: inline-block;
+	text-transform: uppercase;
+	background: linear-gradient(90deg, #2737ef,#26b378);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	color: transparent;
+}
+.btns-popup a.btn-continue:hover{
+	background: #222222;
+	transform: scale(1.1);
+}
+.btns-popup a.btn-continue:hover span{
+	background: linear-gradient(#FFFFFF, #FFFFFF);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	color: transparent;
+}
+.btns-popup a.btn-skip{
+	display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.btns-popup a.btn-skip:hover{color: #222222;}
+
+@media screen and (max-width: 640px){
+	main{padding: 20px; margin-left: 0; margin-right: 0;}
+}
+
+@media screen and (max-width: 540px){
+	#carousel .item-box .item{width: calc(98% / 2);}
+	.photos figure{width: 100%;}
+}
+
+@media screen and (max-width: 420px){
+	#carousel .item-box .item{width: 100%;}
+	.slider .dot-box .dot{width: 18px; height: 18px;}
+	h2{font-size: 27px;}
+	.btns-popup{font-size: 20px; padding-top: 10px;}
+}

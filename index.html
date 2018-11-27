@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto: Maqueta Un Hombre Bajo La Lluvia</title>
+	<link href="https://fonts.googleapis.com/css?family=Lilita+One|Montserrat:400,700,800" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<main>
+		<h1>¿CÓMO QUIERES VER HOY A FERNANDO?</h1>
+		<div id="carousel">
+			<div class="handler prev">&#10094;</div>
+			<div class="carousel-box">
+				<div class="item-box">
+					<div class="item undersun">
+						<a href="#" id="undersun"><img src="images/btn_sol_2.png" alt=""></a>
+					</div>
+					<div class="item underrain">
+						<a href="#" id="underrain"><img src="images/btn_lluvia_2.png" alt=""></a>
+					</div>
+					<div class="item underground">
+						<a href="#" id="underground"><img src="images/btn_tierra_2.png" alt=""></a>
+					</div>
+					<div class="item undersun">
+						<a href="#" id="undersun"><img src="images/btn_sol_2.png" alt=""></a>
+					</div>
+					<div class="item underrain">
+						<a href="#" id="underrain"><img src="images/btn_lluvia_2.png" alt=""></a>
+					</div>
+					<div class="item underground">
+						<a href="#" id="underground"><img src="images/btn_tierra_2.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="handler next">&#10095;</div>
+		</div>
+		<section id="underPhotos">
+			<div class="photos undersun">
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+			</div>
+			<div class="photos underrain">
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+			</div>
+			<div class="photos underground">
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+				<figure><img src="images/yo_bajo_lluvia.jpg" alt=""></figure>
+			</div>
+			<div class="clear"></div>
+		</section>
+		<div class="overlay">
+			<div class="popup">
+				<div class="slider">
+					<ul>
+						<li class="slide"><img src="images/yo_bajo_lluvia.jpg" alt=""></li>
+						<li class="slide"><img src="images/yo_bajo_lluvia.jpg" alt=""></li>
+						<li class="slide"><img src="images/yo_bajo_lluvia.jpg" alt=""></li>
+					</ul>
+					<div class="dot-box">
+						<span class="dot" onclick="show(0);"></span>
+						<span class="dot" onclick="show(1);"></span>
+						<span class="dot" onclick="show(2);"></span>
+					</div>
+				</div>
+				<h2>NO ES UN ANUNCIO, SOY YO BAJO LA LLUVIA</h2>
+				<div class="btns-popup">
+					<a href="#" class="closePopup btn-continue"><span>Continuar</span></a>
+					<a href="#" class="closePopup btn-skip">Omitir Anuncio</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/general-functions.js"></script>
+</body>
+</html>
